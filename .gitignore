@@ -1,0 +1,30 @@
+# 敏感与运行时
+config.toml
+store.json
+store.tmp
+store.corrupt.json
+*.bak
+*.bak.*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.env
+.env.*
+
+# 编辑器 / 系统
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# 本地杂项
+templates/.*
+*.log
