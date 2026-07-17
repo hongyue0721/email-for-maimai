@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ sender_name }}的信</title>
+</head>
+<body style="margin:0;padding:0;background:#fff0f6;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;">
+  <!-- 外层背景容器：粉色渐变 + 顶部底部留白 -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(180deg,#ffe0ec 0%,#fff0f6 50%,#ffe9f3 100%);padding:32px 0;">
+    <tr>
+      <td align="center">
+
+        <!-- 信件卡片：奶油白 + 圆角 + 柔和粉色阴影 -->
+        <table role="presentation" width="560" cellpadding="0" cellspacing="0" style="max-width:560px;background:#fffafc;border-radius:24px;overflow:hidden;box-shadow:0 8px 28px rgba(255,143,179,0.18);border:1px solid #ffe0ec;">
+
+          <!-- 顶部装饰条：粉色渐变 + 小爱心 -->
+          <tr>
+            <td style="background:linear-gradient(135deg,#ff9ec4 0%,#ffc0d9 50%,#ffd6e8 100%);padding:26px 32px 22px 32px;text-align:center;">
+              <!-- 用 CSS 画的小爱心，不依赖图片 -->
+              <div style="font-size:26px;color:#ffffff;letter-spacing:6px;line-height:1;">
+                &#9825; &#9829; &#9825;
+              </div>
+              <h1 style="margin:10px 0 4px 0;color:#ffffff;font-size:24px;font-weight:700;letter-spacing:1px;text-shadow:0 1px 4px rgba(214,51,108,0.25);">
+                {{ greeting_word }}，{{ nickname }}
+              </h1>
+              <p style="margin:0;color:#fff5f9;font-size:12px;letter-spacing:2px;">
+                ~ 来自{{ sender_name }}的一封信 ~
+              </p>
+            </td>
+          </tr>
+
+          <!-- 小波浪装饰分隔（用背景色块模拟） -->
+          <tr>
+            <td style="background:#fffafc;height:14px;font-size:0;line-height:0;">
+              <div style="height:14px;background:linear-gradient(180deg,#ffd6e8 0%,#fffafc 100%);border-radius:0 0 50% 50% / 0 0 100% 100%;"></div>
+            </td>
+          </tr>
+
+          <!-- 正文区：留白充足，行高舒适 -->
+          <tr>
+            <td style="padding:24px 36px 12px 36px;">
+              <div style="color:#5a4a52;font-size:15px;line-height:1.9;white-space:pre-wrap;letter-spacing:0.3px;">
+                {{ content }}
+              </div>
+            </td>
+          </tr>
+
+          <!-- 可爱虚线分隔 -->
+          <tr>
+            <td style="padding:8px 36px;">
+              <div style="border-top:2px dotted #ffc9de;margin:0;"></div>
+            </td>
+          </tr>
+
+          <!-- 落款区：发件人 + 时间 -->
+          <tr>
+            <td style="padding:16px 36px 30px 36px;">
+              <p style="margin:0;color:#d9638f;font-size:14px;font-weight:600;line-height:1.7;">
+                —— {{ sender_name }}
+              </p>
+              <p style="margin:4px 0 0 0;color:#c4a0b0;font-size:12px;line-height:1.6;">
+                {{ send_time }}
+              </p>
+              <div style="margin-top:14px;font-size:14px;color:#ff9ec4;letter-spacing:4px;">
+                &#9825;
+              </div>
+            </td>
+          </tr>
+
+          <!-- 底部小尾巴：粉色条 + 想说的话 -->
+          <tr>
+            <td style="background:linear-gradient(135deg,#ffe9f3 0%,#fff0f6 100%);padding:16px 32px;text-align:center;border-top:1px solid #ffe0ec;">
+              <p style="margin:0;color:#e08fb0;font-size:11px;letter-spacing:1px;line-height:1.6;">
+                这封信由{{ sender_name }}亲手写下 &#183; 每一句都是真心的哦
+              </p>
+            </td>
+          </tr>
+
+        </table>
+
+        <!-- 卡片下方的小提示（可选） -->
+        <table role="presentation" width="560" cellpadding="0" cellspacing="0" style="max-width:560px;">
+          <tr>
+            <td style="padding:16px 0 0 0;text-align:center;">
+              <p style="margin:0;color:#d9a5bd;font-size:11px;letter-spacing:1px;">
+                &#9888; 本邮件为自动发送，请勿直接回复
+              </p>
+            </td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
