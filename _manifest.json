@@ -1,0 +1,56 @@
+{
+  "manifest_version": 2,
+  "version": "0.1.0",
+  "name": "麦麦邮件 (Email for MaiMai)",
+  "description": "通过配置的 SMTP 邮件服务（如 Brevo/QQ/163/Gmail），按设定时间或对话触发，给绑定了邮箱的用户发送问候/想念邮件。邮件正文基于用户与麦麦的真实聊天记录由 LLM 生成，支持 HTML 模板填空渲染。",
+  "author": {
+    "name": "hongyue",
+    "url": "https://github.com/hongyue"
+  },
+  "license": "MIT",
+  "urls": {
+    "repository": "https://github.com/hongyue/email-for-maimai"
+  },
+  "host_application": {
+    "min_version": "1.0.0",
+    "max_version": "1.99.99"
+  },
+  "sdk": {
+    "min_version": "2.0.0",
+    "max_version": "2.99.99"
+  },
+  "dependencies": [
+    {
+      "type": "python_package",
+      "name": "aiosmtplib",
+      "version_spec": ">=3.0.0"
+    },
+    {
+      "type": "python_package",
+      "name": "jinja2",
+      "version_spec": ">=3.1.0"
+    }
+  ],
+  "capabilities": [
+    "send.text",
+    "chat.get_stream_by_user_id",
+    "chat.open_session",
+    "message.get_recent",
+    "message.get_by_time",
+    "message.get_by_time_in_chat",
+    "message.build_readable",
+    "person.get_id",
+    "person.get_value",
+    "llm.generate",
+    "config.get",
+    "knowledge.search"
+  ],
+  "plugin_type": "integration",
+  "i18n": {
+    "default_locale": "zh-CN",
+    "supported_locales": [
+      "zh-CN"
+    ]
+  },
+  "id": "email-for-maimai"
+}
