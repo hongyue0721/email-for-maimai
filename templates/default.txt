@@ -1,0 +1,6 @@
+{{ greeting_word }}呀，{{ nickname }}~
+
+{{ content }}
+
+—— {{ sender_name }}
+{{ send_time }}
