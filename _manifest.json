@@ -5,11 +5,11 @@
   "description": "通过配置的 SMTP 邮件服务（如 Brevo/QQ/163/Gmail），按设定时间或对话触发，给绑定了邮箱的用户发送问候/想念邮件。邮件正文基于用户与麦麦的真实聊天记录由 LLM 生成，支持 HTML 模板填空渲染。",
   "author": {
     "name": "hongyue",
-    "url": "https://github.com/hongyue"
+    "url": "https://github.com/hongyue0721"
   },
   "license": "MIT",
   "urls": {
-    "repository": "https://github.com/hongyue/email-for-maimai"
+    "repository": "https://github.com/hongyue0721/email-for-maimai"
   },
   "host_application": {
     "min_version": "1.0.0",
